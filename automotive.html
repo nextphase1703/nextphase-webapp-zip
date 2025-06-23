@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nextphase</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  .card-carousel-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+    max-width: 100%;
+  }
+
+  .card-carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+
+  .card-carousel .card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 18rem;
+  }
+.animated-text {
+  animation: slideFadeIn 5s ease-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+    .hero {
+      background-color: #f4f8fb;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
+
+    .icon-box {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer {
+      background: #111;
+      color: white;
+      padding: 40px 0;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      padding-top: 0.25rem; padding-bottom: 0.25rem;
+    }
+
+    .nav-link {
+      color: #2f2d2d !important;
+    }
+
+    .nav-link:hover {
+      color: #0d6efd !important;
+    }
+
+    .carousel-item img {
+      max-height: 400px;
+      object-fit: cover;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sticky Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-light shadow-sm py-3" >
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold" href="#"><img src="img/real1/logo.webp" alt="Logo" width="200" height="200"></a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <!-- Navigation Items -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav ms-3 d-flex align-items-center">
+
+
+        <!-- Home -->
+        
+          
+           <a href="index.html" class="btn btn-outline-dark" style="font-weight: 700;">Home</a>
+       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- Services -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+            <button type="button" class="btn btn-outline-dark" style="font-weight: 700;">Services</button>
+          </a>
+          <ul class="dropdown-menu">
+            
+
+             <li><a class="dropdown-item" href="technical-support.html">Technical Support</a></li>
+                          <li><a class="dropdown-item" href="customized-solutions.html">Customized Solutions</a></li>
+                          <li><a class="dropdown-item" href="supply-chain-management.html">Supply Chain Management</a></li>
+                          
+                          <li><a class="dropdown-item" href="design-services.html">Design Services</a></li>
+                          <li><a class="dropdown-item" href="services-inventory-management.html">Inventory Management</a>
+                          </li>
+                          <li><a class="dropdown-item" href="logistics-and-fulfillment.html">Logistics and Fulfillment</a>
+                          </li>
+                        </li>
+          </ul>
+        </li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- Industries -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="industriesDropdown" role="button" data-bs-toggle="dropdown">
+            <button type="button" class="btn btn-outline-dark" style="font-weight: 700;">Market sector</button>
+          </a>
+          <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="aerospace-and-defense.html">Aerospace and Defense</a></li>
+                          <li><a class="dropdown-item" href="automotive.html">Automotive</a></li>
+                          <li><a class="dropdown-item" href="consumer-electronics.html">Consumer Electronics</a></li>
+                          <li><a class="dropdown-item" href="industrial.html">Industrial</a></li>
+                          <li><a class="dropdown-item" href="medical.html">Medical</a></li>
+                          <li><a class="dropdown-item" href="telecommunications.html">Telecommunications</a></li>
+                          <li><a class="dropdown-item" href="energy.html">Energy</a></li>
+                          <li><a class="dropdown-item" href="iot.html">IoT (Internet of Things)</a></li>
+                          <li><a class="dropdown-item" href="robotics.html">Robotics</a></li>
+          </ul>
+        </li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- About -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+            <button type="button" class="btn btn-outline-dark" style="font-weight: 700;"> Categories</button>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="integrated-circuits.html">Integrated Circuits</a></li>
+                          <li><a class="dropdown-item" href="resistors.html">Resistors</a></li>
+                          <li><a class="dropdown-item" href="capacitors.html">Capacitors</a></li>
+                          <li><a class="dropdown-item" href="interconnects.html">Interconnects</a></li>
+                          <li><a class="dropdown-item" href="memory.html">Memory</a></li>
+                          <li><a class="dropdown-item" href="optoelectronics.html">Optoelectronics</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- About -->
+        <!-- About -->
+ 
+          <a href="#contactus" class="btn btn-outline-dark" style="font-weight: 700;">Contact</a>
+      
+    </div>
+  </div>
+</nav>
+
+
+
+
+ <div role="main" class="main">
+        <section class="page-header page-header-classic" style="background-color: #111;color: white;">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <ul class="breadcrumb">
+                  <li><a href="index.html" style="color: #f4f8fb;">Home> </a></li>&nbsp;
+                  <li class="active">Market Sectors</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col p-static">
+                <h1 data-title-border>Automotive</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="container py-2">
+          <div class="row">
+            <div class="col-lg-3">
+              <aside class="sidebar">
+                <h5 class="font-weight-bold">Categories</h5>
+                <ul class="nav nav-list flex-column mb-5" style="color: #111;">
+                   <li class="nav-item"><a class="nav-link" href="aerospace-and-defense.html">>Aerospace and Defense</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="automotive.html">>Automotive</a></li>
+                  <li class="nav-item"><a class="nav-link" href="consumer-electronics.html">>Consumer Electronics</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="industrial.html">>Industrial</a></li>
+                  <li class="nav-item"><a class="nav-link" href="medical.html">>Medical</a></li>
+                  <li class="nav-item"><a class="nav-link" href="telecommunications.html">>Telecommunications</a></li>
+                  <li class="nav-item"><a class="nav-link" href="energy.html">>Energy</a></li>
+                  <li class="nav-item"><a class="nav-link" href="iot.html">>IoT (Internet of Things)</a></li>
+                  <li class="nav-item"><a class="nav-link" href="robotics.html">>Robotics</a></li>
+                </ul>
+              </aside>
+            </div>
+
+
+
+            <div class="col-lg-6">
+
+              <h2 class="font-weight-normal text-7 mb-2"><strong class="font-weight-extra-bold">Automotive</strong></h2>
+              <p>The automotive industry is a major consumer of electronic components, with modern cars
+                containing a complex array of electronic systems and components. Electronic components are used in
+                everything from the engine control system and transmission to infotainment systems and driver assistance
+                systems.</p>
+              <img class="float-left img-fluid margin-right-text me-3" width="400" src="img/automotive-1.webp"
+                alt="automotive" style="float: left;">
+              <p>Electronic components used in automotive applications must be rugged and reliable to withstand the
+                harsh environments of automotive operation, including temperature extremes, humidity, and vibration. In
+                addition, these components must meet strict quality and safety standards to ensure that they operate
+                correctly and do not pose a risk to drivers or passengers.</p>
+              <p>The demand for electronic components in the automotive industry is expected to continue to grow as
+                automakers increasingly rely on technology to improve vehicle performance, efficiency, and safety. For
+                example, electronic components such as sensors and cameras are used in driver assistance systems to
+                provide features such as lane departure warning, adaptive cruise control, and automatic emergency
+                braking.</p>
+              <p>The automotive industry is also driving innovation in electronic components, with the development of
+                technologies such as electric and hybrid vehicles requiring new and innovative electronic components. As
+                the automotive industry continues to evolve, the demand for electronic components is expected to grow,
+                making it a significant market for electronic components distribution companies.</p>
+              <p>One of the key trends in the automotive industry is the move towards electric and hybrid vehicles.
+                These vehicles rely heavily on electronic components to manage and control the flow of energy between
+                the battery and the electric motor. This has led to a growing demand for electronic components such as
+                power management ICs, motor control ICs, and battery management systems.</p>
+              <p>In addition to electric and hybrid vehicles, the automotive industry is also driving innovation in
+                areas such as autonomous vehicles and connected cars. These technologies require sophisticated
+                electronic components such as sensors, microcontrollers, and wireless communication modules to enable
+                features such as advanced driver assistance systems and vehicle-to-vehicle communication.</p>
+              <p>The increasing complexity of automotive electronic systems is also driving demand for electronic
+                components distribution companies to provide value-added services such as component sourcing, kitting,
+                and assembly. This allows customers to focus on the design and development of their products, while
+                leaving the procurement and assembly of electronic components to the distribution company.</p>
+              <p>Electronic components distribution companies that serve the automotive industry must have the expertise
+                and capabilities to provide high-quality components that meet the strict quality and reliability
+                standards required by the industry. This may include working closely with manufacturers to ensure that
+                the components meet the necessary performance criteria, as well as providing technical support and
+                expertise to help customers select the right components for their specific needs.</p>
+            </div>
+           <div class="col-lg-3 mt-4 mt-lg-0">
+  <aside class="sidebar">
+    <div class="mb-3"><img class="img-sidebar w-100" src="img/automotive-2.webp" alt="automotive"></div>
+    <div class="mb-3"><img class="img-sidebar w-100" src="img/automotive-3.webp" alt="automotive"></div>
+    <div class="mb-3"><img class="img-sidebar w-100" src="img/automotive-4.webp" alt="automotive"></div>
+    <div class="mb-3"><img class="img-sidebar w-100" src="img/automotive-5.webp" alt="automotive"></div>
+    <div class="mb-3"><img class="img-sidebar w-100" src="img/automotive-6.webp" alt="automotive"></div>
+    <div class="mb-3"><img class="img-sidebar w-100" src="img/automotive-7.webp" alt="automotive"></div>
+  </aside>
+</div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+<footer class="footer " id="contactus">
+  <section class="py-4">
+  <footer id="footer" >
+    <div class="container">
+      <div class="footer-ribbon">
+        <span style="font-size:300%; font-weight: bolder;">Get in Touch</span>
+      </div>
+      <div class="row py-5 my-4">
+        <div class="col-md-7 mb-4 mb-lg-0">
+          <h5 class="text-3 mb-3">ABOUT US</h5>
+          <p class="mt-2 mb-2">NextPhase enables progress through its innovative supply chain logistics practices. As a worldwide distributor, we specialize in the testing and sale of microelectronics. We help customers to effectively manage their supply chain so that they can get back to what really matters—producing quality products.</p>
+          <p><a href="about-us.html" class="btn-flat btn-xs text-color-light"><strong class="text-2">VIEW MORE</strong><i class="fas fa-angle-right p-relative top-1 pl-2"></i></a></p>
+          <ul class="social-icons social-icons-big social-icons-dark-2">
+            <li class="social-icons-linkedin"><a href="https://www.linkedin.com/company/digiodeofficial/about/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in">Linkedin</i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-5 mb-4 mb-lg-0" id="contactus">
+          <h5 class="text-3 mb-3 pb-1">CONTACT US</h5>
+          <p class="text-5 text-color-light font-weight-bold">NextPhase Semiconductor</p>
+          <ul class="list list-icons list-icons-lg">
+        
+ <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">Head Office: 207-B First Floor, Suryadev Nagar, Indore, Madhya Pradesh, India
+</p></li>
+            <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">Branch Office: Room 2208,Diwang Buiding,NO.5002 Shennan East Road, Luohu district, Shenzhen.
+</p></li>
+
+            <li class="mb-1"><i class="fa fa-phone text-color-primary"></i><p class="m-0">+1 (346) 971-5307 Email: sales@nextphase.com</p></li>
+          </ul>
+        </div>
+      </div>
+    <p style="align-content: center;">&copy; 2025 Nextphase Semiconductor.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nextphase</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  .card-carousel-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+    max-width: 100%;
+  }
+
+  .card-carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+
+  .card-carousel .card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 18rem;
+  }
+.animated-text {
+  animation: slideFadeIn 5s ease-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+    .hero {
+      background-color: #f4f8fb;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
+
+    .icon-box {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer {
+      background: #111;
+      color: white;
+      padding: 40px 0;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      padding-top: 0.25rem; padding-bottom: 0.25rem;
+    }
+
+    .nav-link {
+      color: white !important;
+    }
+
+    .nav-link:hover {
+      color: #0d6efd !important;
+    }
+
+    .carousel-item img {
+      max-height: 400px;
+      object-fit: cover;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sticky Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-light shadow-sm py-3" >
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold" href="#"><img src="img/real1/logo.webp" alt="Logo" width="200" height="200"></a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <!-- Navigation Items -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav ms-3 d-flex align-items-center">
+
+
+        <!-- Home -->
+        <a href="index.html" class="btn btn-outline-dark" style="font-weight: 700;">Home</a>
+       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- Services -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+            <button type="button" class="btn btn-outline-dark" style="font-weight: 700;">Services</button>
+          </a>
+          <ul class="dropdown-menu">
+            
+
+             <li><a class="dropdown-item" href="technical-support.html">Technical Support</a></li>
+                          <li><a class="dropdown-item" href="customized-solutions.html">Customized Solutions</a></li>
+                          <li><a class="dropdown-item" href="supply-chain-management.html">Supply Chain Management</a></li>
+                          
+                          <li><a class="dropdown-item" href="design-services.html">Design Services</a></li>
+                          <li><a class="dropdown-item" href="services-inventory-management.html">Inventory Management</a>
+                          </li>
+                          <li><a class="dropdown-item" href="logistics-and-fulfillment.html">Logistics and Fulfillment</a>
+                          </li>
+                        </li>
+          </ul>
+        </li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- Industries -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="industriesDropdown" role="button" data-bs-toggle="dropdown">
+            <button type="button" class="btn btn-outline-dark" style="font-weight: 700;">Market sector</button>
+          </a>
+          <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="aerospace-and-defense.html">Aerospace and Defense</a></li>
+                          <li><a class="dropdown-item" href="automotive.html">Automotive</a></li>
+                          <li><a class="dropdown-item" href="consumer-electronics.html">Consumer Electronics</a></li>
+                          <li><a class="dropdown-item" href="industrial.html">Industrial</a></li>
+                          <li><a class="dropdown-item" href="medical.html">Medical</a></li>
+                          <li><a class="dropdown-item" href="telecommunications.html">Telecommunications</a></li>
+                          <li><a class="dropdown-item" href="energy.html">Energy</a></li>
+                          <li><a class="dropdown-item" href="iot.html">IoT (Internet of Things)</a></li>
+                          <li><a class="dropdown-item" href="robotics.html">Robotics</a></li>
+          </ul>
+        </li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- About -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+            <button type="button" class="btn btn-outline-dark" style="font-weight: 700;"> Categories</button>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="integrated-circuits.html">Integrated Circuits</a></li>
+                          <li><a class="dropdown-item" href="resistors.html">Resistors</a></li>
+                          <li><a class="dropdown-item" href="capacitors.html">Capacitors</a></li>
+                          <li><a class="dropdown-item" href="interconnects.html">Interconnects</a></li>
+                          <li><a class="dropdown-item" href="memory.html">Memory</a></li>
+                          <li><a class="dropdown-item" href="optoelectronics.html">Optoelectronics</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- About -->
+        <!-- About -->
+ 
+          <a href="#contactus" class="btn btn-outline-dark" style="font-weight: 700;">Contact</a>
+      
+    </div>
+  </div>
+</nav>
+
+
+    
+           
+          
+            <div role="main" class="main">
+
+        <section class="page-header page-header-classic" style="background-color: #111;color: white;">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <ul class="breadcrumb">
+                  <li><a href="index.html" style="color: #f4f8fb;">Home></a></li>&nbsp;
+                  <li class="active">Services</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col p-static">
+                <h1 data-title-border>Design Services</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="container">
+          <div class="row my-5">
+            <div class="col-lg-12 appear-animation" data-appear-animation="fadeInRightShorter">
+              <h2 class="font-weight-normal text-6 line-heigh-2 mb-4"><strong class="font-weight-extra-bold">Comprehensive PCB Design Services </strong></h2>
+
+              <p>In addition to electronic component distribution services, Digiode offers comprehensive PCB design
+                services tailored to meet your unique requirements. Our skilled team of experienced engineers combines
+                creativity, technical expertise, and cutting-edge design tools to bring your ideas to life. Whether you
+                need a simple single-layer PCB or a complex multi-layer design, we have the knowledge and capabilities
+                to deliver high-quality, functional, and cost-effective solutions.</p>
+
+              <p>We understand that a well-designed PCB is the foundation of any electronic system. That's why we work
+                closely with you to fully understand your project goals, functionality needs, and manufacturing
+                constraints. With meticulous attention to detail, we carefully craft PCB layouts that optimize signal
+                integrity, minimize noise, and ensure efficient assembly and manufacturing processes.</p>
+
+              <p>Digiode’s PCB design services encompass all aspects of the design process, including schematic capture,
+                component placement, trace routing, power and ground plane design, and design rule checks. We leverage
+                the latest design software and adhere to industry best practices to ensure that your PCB design meets
+                the highest standards of quality, reliability, and manufacturability.</p>
+
+              <p>At Digiode, we pride ourselves on delivering solutions that not only meet your technical requirements
+                but also take into consideration factors such as cost optimization and time-to-market. Our team is
+                committed to providing exceptional customer service, open communication, and timely project delivery. We
+                strive to build long-lasting partnerships with our clients, assisting them at every stage of the PCB
+                design process to transform concepts into successful products.</p>
+            </div>
+          </div>
+        </div>
+
+        <section class="section section-height-3 bg-color-grey m-0 border-0">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4"><img src="img/design-services-1.webp" class="img-fluid img-services" alt="Comprehensive design support" title="Comprehensive design support"></div>
+              <div class="col-lg-4"><img src="img/design-services-2.webp" class="img-fluid img-services" alt="Custom PCB design services" title="Custom PCB design services"></div>
+              <div class="col-lg-4"><img src="img/design-services-3.webp" class="img-fluid img-services" alt="Expert PCB layout services" title="Expert PCB layout services"></div>
+            </div>
+            <div class="row my-5">
+              <div class="col-lg-4"><img src="img/design-services-4.webp" class="img-fluid img-services" alt="Creative PCB engineering" title="Creative PCB engineering"></div>
+              <div class="col-lg-4"><img src="img/design-services-5.webp" class="img-fluid img-services" alt="Cost-effective PCB solutions" title="Cost-effective PCB solutions"></div>
+              <div class="col-lg-4"><img src="img/design-services-6.webp" class="img-fluid img-services" alt="Fast and reliable PCB services" title="Fast and reliable PCB services"></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="container">
+          <div class="row pt-5 mt-4">
+            <div class="col">
+              <h2 class="font-weight-normal text-6 mb-4"><strong class="font-weight-extra-bold">Related
+                  Services</strong></h2>
+            </div>
+          </div>
+          <div class="row recent-posts pb-5 mb-4">
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <article>
+                <div class="row">
+                  <div class="col pl-1">
+                    <h4 class="line-height-3 text-4"><a href="technical-support.html" class="text-dark">Technical
+                        Support</a></h4>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <article>
+                <div class="row">
+                  <div class="col pl-1">
+                    <h4 class="line-height-3 text-4"><a href="customized-solutions.html" class="text-dark">Customized
+                        Solutions</a></h4>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <article>
+                <div class="row">
+                  <div class="col pl-1">
+                    <h4 class="line-height-3 text-4"><a href="supply-chain-management.html" class="text-dark">Supply
+                        Chain Management</a></h4>
+                  </div>
+                </div>
+              </article>
+            </div>
+          
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <article>
+                <div class="row">
+                  <div class="col pl-1">
+                    <h4 class="line-height-3 text-4"><a href="design-services.html" class="text-dark">Design
+                        Services</a></h4>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <article>
+                <div class="row">
+                  <div class="col pl-1">
+                    <h4 class="line-height-3 text-4"><a href="services-inventory-management.html"
+                        class="text-dark">Inventory Management</a></h4>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+              <article>
+                <div class="row">
+                  <div class="col pl-1">
+                    <h4 class="line-height-3 text-4"><a href="logistics-and-fulfillment.html" class="text-dark">Logistics
+                        and Fulfillment</a></h4>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+         
+
+
+
+
+<!-- Footer -->
+<footer class="footer " id="contactus">
+  <section class="py-4">
+  <footer id="footer" >
+    <div class="container">
+      <div class="footer-ribbon">
+        <span style="font-size:300%; font-weight: bolder;">Get in Touch</span>
+      </div>
+      <div class="row py-5 my-4">
+        <div class="col-md-7 mb-4 mb-lg-0">
+          <h5 class="text-3 mb-3">ABOUT US</h5>
+          <p class="mt-2 mb-2">NextPhase enables progress through its innovative supply chain logistics practices. As a worldwide distributor, we specialize in the testing and sale of microelectronics. We help customers to effectively manage their supply chain so that they can get back to what really matters—producing quality products.</p>
+          <p><a href="about-us.html" class="btn-flat btn-xs text-color-light"><strong class="text-2">VIEW MORE</strong><i class="fas fa-angle-right p-relative top-1 pl-2"></i></a></p>
+          <ul class="social-icons social-icons-big social-icons-dark-2">
+            <li class="social-icons-linkedin"><a href="https://www.linkedin.com/company/digiodeofficial/about/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in">Linkedin</i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-5 mb-4 mb-lg-0" id="contactus">
+          <h5 class="text-3 mb-3 pb-1">CONTACT US</h5>
+          <p class="text-5 text-color-light font-weight-bold">NextPhase Semiconductor</p>
+          <ul class="list list-icons list-icons-lg">
+        
+ <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">Head Office: 207-B First Floor, Suryadev Nagar, Indore, Madhya Pradesh, India
+</p></li>
+            <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">Branch Office: Room 2208,Diwang Buiding,NO.5002 Shennan East Road, Luohu district, Shenzhen.
+</p></li>
+
+            <li class="mb-1"><i class="fa fa-phone text-color-primary"></i><p class="m-0">+1 (346) 971-5307 Email: sales@nextphase.com</p></li>
+          </ul>
+        </div>
+      </div>
+    <p style="align-content: center;">&copy; 2025 Nextphase Semiconductor.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

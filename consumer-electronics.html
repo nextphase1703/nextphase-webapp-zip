@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nextphase</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  .card-carousel-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+    max-width: 100%;
+  }
+
+  .card-carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+
+  .card-carousel .card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 18rem;
+  }
+.animated-text {
+  animation: slideFadeIn 5s ease-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+    .hero {
+      background-color: #f4f8fb;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      transition: 0.3s;
+    }
+
+    .icon-box {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer {
+      background: #111;
+      color: white;
+      padding: 40px 0;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      padding-top: 0.25rem; padding-bottom: 0.25rem;
+    }
+
+    .nav-link {
+      color: #2f2d2d !important;
+    }
+
+    .nav-link:hover {
+      color: #0d6efd !important;
+    }
+
+    .carousel-item img {
+      max-height: 400px;
+      object-fit: cover;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sticky Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-light shadow-sm py-3" >
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold" href="#"><img src="img/real1/logo.webp" alt="Logo" width="200" height="200"></a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <!-- Navigation Items -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav ms-3 d-flex align-items-center">
+
+
+        <!-- Home -->
+        
+          
+           <a href="index.html" class="btn btn-outline-dark" style="font-weight: 700;">Home</a>
+       
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- Services -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+            <button type="button" class="btn btn-outline-dark" style="font-weight: 700;">Services</button>
+          </a>
+          <ul class="dropdown-menu">
+            
+
+             <li><a class="dropdown-item" href="technical-support.html">Technical Support</a></li>
+                          <li><a class="dropdown-item" href="customized-solutions.html">Customized Solutions</a></li>
+                          <li><a class="dropdown-item" href="supply-chain-management.html">Supply Chain Management</a></li>
+                          
+                          <li><a class="dropdown-item" href="design-services.html">Design Services</a></li>
+                          <li><a class="dropdown-item" href="services-inventory-management.html">Inventory Management</a>
+                          </li>
+                          <li><a class="dropdown-item" href="logistics-and-fulfillment.html">Logistics and Fulfillment</a>
+                          </li>
+                        </li>
+          </ul>
+        </li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- Industries -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="industriesDropdown" role="button" data-bs-toggle="dropdown">
+            <button type="button" class="btn btn-outline-dark" style="font-weight: 700;">Market sector</button>
+          </a>
+          <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="aerospace-and-defense.html">Aerospace and Defense</a></li>
+                          <li><a class="dropdown-item" href="automotive.html">Automotive</a></li>
+                          <li><a class="dropdown-item" href="consumer-electronics.html">Consumer Electronics</a></li>
+                          <li><a class="dropdown-item" href="industrial.html">Industrial</a></li>
+                          <li><a class="dropdown-item" href="medical.html">Medical</a></li>
+                          <li><a class="dropdown-item" href="telecommunications.html">Telecommunications</a></li>
+                          <li><a class="dropdown-item" href="energy.html">Energy</a></li>
+                          <li><a class="dropdown-item" href="iot.html">IoT (Internet of Things)</a></li>
+                          <li><a class="dropdown-item" href="robotics.html">Robotics</a></li>
+          </ul>
+        </li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- About -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+            <button type="button" class="btn btn-outline-dark" style="font-weight: 700;"> Categories</button>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="integrated-circuits.html">Integrated Circuits</a></li>
+                          <li><a class="dropdown-item" href="resistors.html">Resistors</a></li>
+                          <li><a class="dropdown-item" href="capacitors.html">Capacitors</a></li>
+                          <li><a class="dropdown-item" href="interconnects.html">Interconnects</a></li>
+                          <li><a class="dropdown-item" href="memory.html">Memory</a></li>
+                          <li><a class="dropdown-item" href="optoelectronics.html">Optoelectronics</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- About -->
+        <!-- About -->
+ 
+          <a href="#contactus" class="btn btn-outline-dark" style="font-weight: 700;">Contact</a>
+      
+    </div>
+  </div>
+</nav>
+
+
+
+
+ <div role="main" class="main">
+        <section class="page-header page-header-classic" style="background-color: #111;color: white;">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <ul class="breadcrumb">
+                  <li><a href="index.html" style="color: #f4f8fb;">Home> </a></li>&nbsp;
+                  <li class="active">Market Sectors</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col p-static">
+                <h1 data-title-border>Consumer Electronics</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="container py-2">
+          <div class="row">
+            <div class="col-lg-3">
+              <aside class="sidebar">
+                <h5 class="font-weight-bold">Categories</h5>
+                <ul class="nav nav-list flex-column mb-5" style="color: #111;">
+                   <li class="nav-item"><a class="nav-link" href="aerospace-and-defense.html">>Aerospace and Defense</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="automotive.html">>Automotive</a></li>
+                  <li class="nav-item"><a class="nav-link" href="consumer-electronics.html">>Consumer Electronics</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="industrial.html">>Industrial</a></li>
+                  <li class="nav-item"><a class="nav-link" href="medical.html">>Medical</a></li>
+                  <li class="nav-item"><a class="nav-link" href="telecommunications.html">>Telecommunications</a></li>
+                  <li class="nav-item"><a class="nav-link" href="energy.html">>Energy</a></li>
+                  <li class="nav-item"><a class="nav-link" href="iot.html">>IoT (Internet of Things)</a></li>
+                  <li class="nav-item"><a class="nav-link" href="robotics.html">>Robotics</a></li>
+                </ul>
+              </aside>
+            </div>
+
+
+
+            <div class="col-lg-6">
+  <!-- Section Title -->
+  <h2 class="font-weight-normal text-7 mb-3">
+    <strong class="font-weight-extra-bold">Consumer Electronics</strong>
+  </h2>
+
+  <!-- Intro Paragraph -->
+  <p>Consumer electronics is a broad market sector that includes everything from smartphones and tablets to gaming consoles and home appliances. Electronic components used in consumer electronics include microprocessors, memory devices, display panels, and sensors.</p>
+
+  <!-- Float Image + Text Wrap -->
+  <div class="clearfix">
+    <img src="img/consumer-electronics-1.webp" alt="consumer-electronics" class="img-fluid float-start me-3 mb-3" width="400">
+    <p>The consumer electronics market is highly competitive, with companies constantly striving to offer new and innovative products that incorporate the latest technology. This has led to a rapid pace of innovation in the electronics industry, with new products and features being introduced at an ever-increasing rate.</p>
+  </div>
+
+  <!-- Remaining Paragraphs -->
+  <p>One of the key drivers of innovation in the consumer electronics industry is the demand for smaller, more powerful, and more energy-efficient electronic components. For example, the development of smartphones and tablets has driven demand for high-resolution displays, powerful processors, and long-lasting batteries.</p>
+
+  <p>In addition, the consumer electronics industry has been driving innovation in areas such as artificial intelligence, virtual reality, and augmented reality. These technologies rely heavily on electronic components such as sensors, microprocessors, and memory devices, and are expected to drive demand for these components in the coming years.</p>
+
+  <p>Overall, the consumer electronics sector is a rapidly evolving market that requires electronic components distribution companies to stay up-to-date with the latest advancements in technology and be able to provide their customers with the components they need to keep up with the pace of innovation in the industry.</p>
+
+  <p>The consumer electronics industry is also driving demand for more sustainable and eco-friendly electronic components. As consumers become more aware of the impact that electronics have on the environment, they are increasingly looking for products that are designed with sustainability in mind.</p>
+
+  <p>Electronic components distribution companies that serve the consumer electronics market must be able to provide components that meet these sustainability requirements, such as components that are made from recycled materials or components that are designed to be easily recyclable at the end of their life.</p>
+
+  <p>In addition to providing sustainable components, electronic components distribution companies in the consumer electronics market must also be able to provide value-added services such as component sourcing, inventory management, and supply chain optimization. This is particularly important in a market where innovation and product development occur at a rapid pace, and companies need to be able to quickly adapt to changing market conditions.</p>
+
+  <p>Furthermore, consumer electronics manufacturers often require custom or specialized components to meet the unique requirements of their products. Electronic components distribution companies that serve this market must have the expertise and capabilities to provide custom components and solutions to meet the specific needs of their customers.</p>
+</div>
+
+
+
+
+           <div class="col-lg-3 mt-4 mt-lg-0">
+  <aside class="sidebar">
+      <div class="mb-3"><img class="img-sidebar w-100" src="img/consumer-electronics-2.webp" alt="consumer-electronics"></div>
+    <div class="mb-3"><img class="img-sidebar w-100" src="img/consumer-electronics-3.webp" alt="consumer-electronics"></div>
+    <div class="mb-3"><img class="img-sidebar w-100" src="img/consumer-electronics-4.webp" alt="consumer-electronics"></div>
+    <div class="mb-3"><img class="img-sidebar w-100" src="img/consumer-electronics-5.webp" alt="consumer-electronics"></div>
+    <div class="mb-3"><img class="img-sidebar w-100" src="img/consumer-electronics-6.webp" alt="consumer-electronics"></div>
+    <div class="mb-3"><img class="img-sidebar w-100" src="img/consumer-electronics-7.webp" alt="consumer-electronics"></div>
+
+  </aside>
+
+
+  
+</div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+<footer class="footer " id="contactus">
+  <section class="py-4">
+  <footer id="footer" >
+    <div class="container">
+      <div class="footer-ribbon">
+        <span style="font-size:300%; font-weight: bolder;">Get in Touch</span>
+      </div>
+      <div class="row py-5 my-4">
+        <div class="col-md-7 mb-4 mb-lg-0">
+          <h5 class="text-3 mb-3">ABOUT US</h5>
+          <p class="mt-2 mb-2">NextPhase enables progress through its innovative supply chain logistics practices. As a worldwide distributor, we specialize in the testing and sale of microelectronics. We help customers to effectively manage their supply chain so that they can get back to what really matters—producing quality products.</p>
+          <p><a href="about-us.html" class="btn-flat btn-xs text-color-light"><strong class="text-2">VIEW MORE</strong><i class="fas fa-angle-right p-relative top-1 pl-2"></i></a></p>
+          <ul class="social-icons social-icons-big social-icons-dark-2">
+            <li class="social-icons-linkedin"><a href="https://www.linkedin.com/company/digiodeofficial/about/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in">Linkedin</i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-5 mb-4 mb-lg-0" id="contactus">
+          <h5 class="text-3 mb-3 pb-1">CONTACT US</h5>
+          <p class="text-5 text-color-light font-weight-bold">NextPhase Semiconductor</p>
+          <ul class="list list-icons list-icons-lg">
+        
+ <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">Head Office: 207-B First Floor, Suryadev Nagar, Indore, Madhya Pradesh, India
+</p></li>
+            <li class="mb-1"><i class="far fa-dot-circle text-color-primary"></i><p class="m-0">Branch Office: Room 2208,Diwang Buiding,NO.5002 Shennan East Road, Luohu district, Shenzhen.
+</p></li>
+
+            <li class="mb-1"><i class="fa fa-phone text-color-primary"></i><p class="m-0">+1 (346) 971-5307 Email: sales@nextphase.com</p></li>
+          </ul>
+        </div>
+      </div>
+    <p style="align-content: center;">&copy; 2025 Nextphase Semiconductor.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
